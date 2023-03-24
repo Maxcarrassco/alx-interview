@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Interview Prep Module."""
 
+
 def pascal_triangle(n):
     """Return list of list containing the pascal triangle structure."""
     if n <= 0:
