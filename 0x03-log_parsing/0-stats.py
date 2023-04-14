@@ -3,16 +3,10 @@ import sys
 """ALX SE Backend Module."""
 
 
-def signal_handler(signal, frame):
-    """Handle SIGINT."""
-    print_stats()
-
-
-signal.signal(signal.SIGINT, signal_handler)
-
 status_stats = {}
 total_size = 0
 counter = 0
+allow = [200, 301, 400, 401, 403, 404, 405, 500]
 
 
 def print_stats():
@@ -25,6 +19,8 @@ def print_stats():
 try:
     for line in sys.stdin:
         line = line.strip('\n').split(' ')
+        if line[-2] not in allow:
+            continue
         status_stats[line[-2]] = 1 + status_stats.get(line[-2], 0)
         total_size += int(line[-1])
         counter += 1
