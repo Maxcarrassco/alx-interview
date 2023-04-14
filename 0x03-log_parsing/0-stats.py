@@ -8,7 +8,6 @@ total_size = 0
 counter = 0
 allow = [200, 301, 400, 401, 403, 404, 405, 500]
 
-
 def print_stats():
     """Print the stats."""
     print('File size: {}'.format(total_size))
@@ -19,6 +18,8 @@ def print_stats():
 try:
     for line in sys.stdin:
         line = line.strip('\n').split()
+        if len(line) != 9:
+            continue
         if len(line) > 2:
             counter += 1
         if int(line[-2]) not in allow:
