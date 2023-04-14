@@ -18,12 +18,13 @@ def print_stats():
 
 try:
     for line in sys.stdin:
-        line = line.strip('\n').split(' ')
-        if line[-2] not in allow:
+        line = line.strip('\n').split()
+        if len(line) > 2:
+            counter += 1
+        if int(line[-2]) not in allow:
             continue
         status_stats[line[-2]] = 1 + status_stats.get(line[-2], 0)
         total_size += int(line[-1])
-        counter += 1
         if counter == 10:
             print_stats()
             counter = 0
