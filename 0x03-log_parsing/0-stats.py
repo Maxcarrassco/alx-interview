@@ -11,9 +11,9 @@ allow = [200, 301, 400, 401, 403, 404, 405, 500]
 
 def print_stats():
     """Print the stats."""
-    print(f'File size: {total_size}')
+    print('File size: {}'.format(total_size))
     for status in sorted(status_stats.keys()):
-        print(f'{status}: {status_stats.get(status)}')
+        print('{}: {}'.format(status, status_stats.get(status)))
 
 
 try:
