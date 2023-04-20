@@ -5,7 +5,7 @@
 def validUTF8(data):
     """Check if a data set is a valid utf-8 encoding."""
     for i in range(len(data)):
-        if data[0] <= 0x7F:
+        if data[i] <= 0x7F:
             continue
         return check_bytes(data, i)
     return True
