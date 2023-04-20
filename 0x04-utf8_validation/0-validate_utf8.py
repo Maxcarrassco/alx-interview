@@ -9,15 +9,15 @@ def validUTF8(data):
         if data[i] <= 0x7F:
             i += 1
         elif data[i] >= 0xC2 and data[i] <= 0xDF:
-            if not check_bytes(data, i + 1, 2):
+            if not check_bytes(data, i + 1, i + 2):
                 return False
             i += 2
         elif data[i] >= 0xE0 and data[i] <= 0xEF:
-            if not check_bytes(data, i + 2, 3):
+            if not check_bytes(data, i + 2, i + 3):
                 return False
             i += 3
         elif data[i] >= 0xF0 and data[i] <= 0xF4:
-            if not check_bytes(data, i + 3, 4):
+            if not check_bytes(data, i + 3, i + 4):
                 return False
             i += 4
         else:
