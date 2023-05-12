@@ -12,7 +12,7 @@ def rotate_2d_matrix(matrix):
 
             top_l = matrix[t][l + i]
             matrix[t][l + i] = matrix[b - i][l]
-            matrix[b - i][i] = matrix[b][r - i]
+            matrix[b - i][l] = matrix[b][r - i]
             matrix[b][r - i] = matrix[t + i][r]
             matrix[t + i][r] = top_l
         r -= 1
