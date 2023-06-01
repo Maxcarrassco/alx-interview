@@ -48,4 +48,6 @@ def isWinner(x, nums):
                 winner = prime.getPlayer(i + 1)
                 stats[winner] = stats[winner] + 1
                 break
+    if stats['Maria'] == stats['Ben']:
+        return None
     return 'Maria' if stats['Maria'] > stats['Ben'] else 'Ben'
