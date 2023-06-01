@@ -16,10 +16,10 @@ def choosePrime(arr):
     return False
 
 def removeMultiples(n, arr):
-    out = set()
+    out = []
     for num in arr:
         if num % n != 0:
-            out.add(num)
+            out.append(num)
     return out
 
 def getPlayer(idx):
@@ -33,7 +33,7 @@ def isWinner(x, nums):
     stats = {'Maria': 0, 'Ben': 0}
 
     for turn in range(x):
-        arr = set(range(1, nums[turn] + 1))
+        arr = list(range(1, nums[turn] + 1))
         for i in arr:
             prime = choosePrime(arr)
             if prime:
