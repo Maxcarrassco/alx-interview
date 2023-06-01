@@ -36,6 +36,9 @@ def isWinner(x, nums):
     """Solve the Prime Game Challenge."""
     stats = {'Maria': 0, 'Ben': 0}
 
+    if not x or not nums:
+        return None
+
     for turn in range(x):
         arr = list(range(1, nums[turn] + 1))
         for i in arr:
