@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""ALX SE Interview Prep Module."""
 
 class PrimeGamer:
     def __init__(self):
@@ -32,6 +33,7 @@ class PrimeGamer:
 
 
 def isWinner(x, nums):
+    """Solve the Prime Game Challenge."""
     stats = {'Maria': 0, 'Ben': 0}
     prime = PrimeGamer()
 
