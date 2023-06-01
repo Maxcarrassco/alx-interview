@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ALX SE Interview Prep Module."""
 
+
 def isPrime(num):
     if num == 1:
         return False
@@ -9,11 +10,13 @@ def isPrime(num):
             return False
     return True
 
+
 def choosePrime(arr):
     for num in arr:
         if isPrime(num):
             return num
     return False
+
 
 def removeMultiples(n, arr):
     out = []
@@ -21,6 +24,7 @@ def removeMultiples(n, arr):
         if num % n != 0:
             out.append(num)
     return out
+
 
 def getPlayer(idx):
     if idx % 2 == 1:
